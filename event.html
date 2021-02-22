@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous"
+    ></script>
+    <link href="css/event.css" rel="stylesheet" />
+    <script src="js/database.js"></script>
+    <script src="js/library.js"></script>
+  </head>
+  <body>
+    <div>
+      <div class="full-width backdropImage" id="backdropImage"></div>
+      <div class="container" style="position: relative; top: -620px;">
+        <div class="row top">
+          <div class="col-2 "></div>
+          <div
+            class="col-5 banner border border-light border-right-0 border-bottom-0 "
+            style="background-size: cover; background-position: center;"
+            id="bannerImage"
+          ></div>
+
+          <div
+            class="col-3 infoBox  border border-light border-left-0 border-bottom-0"
+            style="background-color: gainsboro"
+          >
+            <p class="date">
+              July
+              <br />
+              25 - 28
+            </p>
+            <p class="timeLocation">
+              <b>Time :</b> 6:00PM - 3:00PM 
+              <br />
+              <b>Location :</b> Vancouver
+            </p>
+            <button class="action">Register</button>
+            <button class="calendar" style="z-index: 9999">Add to calendar</button>
+          </div>
+        </div>
+        <div class="row bottom">
+          <div class="col-2"></div>
+          <div
+            class="col-5 description border border-light border-right-0 border-top-0"
+          >
+            <h4
+              style="text-align: center; margin-top: 40px;"
+              id="eventName"
+            ></h4>
+
+            <div class="textBox">
+              <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-3 maps border border-light border-left-0 border-top-0"
+          >
+            <div class="mapBox">
+              <div class="backgroundBorder">
+                <div class="mapouter">
+                  <div class="gmap_canvas">
+                    <iframe
+                      width="400"
+                      height="500"
+                      id="gmap_canvas"
+                      src="https://maps.google.com/maps?q=san%20jose%20state&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                      frameborder="0"
+                      scrolling="no"
+                      marginheight="0"
+                      marginwidth="0"
+                      class="gMap"
+                    ></iframe
+                    ><a href="https://www.utilitysavingexpert.com"
+                      >Utility Saving Expert</a
+                    >
+                  </div>
+                  <style>
+                    .mapouter {
+                      position: relative;
+                      text-align: right;
+                      height: 300px;
+                      width: 300px;
+                    }
+                    .gmap_canvas {
+                      overflow: hidden;
+                      background: none !important;
+                      height: 300px;
+                      width: 250px;
+                    }
+                  </style>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/event.js"></script>
+  </body>
+</html>

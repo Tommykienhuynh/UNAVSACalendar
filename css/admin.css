@@ -1,0 +1,211 @@
+.controlBox {
+  background-color: var(--bg-secondary);
+  /* height: 600px; */
+}
+
+.testone {
+  background-color: grey;
+  height: 200px;
+  color: white;
+}
+
+.box {
+  margin-top: 180px;
+}
+
+.number {
+  font-size: 50px;
+  margin-top: 40px;
+}
+
+.test3 {
+  background-color: red;
+}
+
+.test4 {
+  background-color: blue;
+}
+
+.allevents {
+  background-color: #9d9d9d;
+  height: 100%;
+}
+
+.status-grid div.card {
+  height: 210px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.card .card-title {
+  font-size: 18px;
+  color: var(--color-secondary);
+}
+
+div.card .number {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+ul.tab-headers {
+  display: flex;
+  padding: 0px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ul.tab-headers li {
+  padding: 10px;
+  color: var(--color-secondary);
+  list-style-type: none;
+  cursor: pointer;
+}
+
+ul.tab-headers li.active {
+  color: var(--color-primary);
+  background-color: #9d9d9d; 
+}
+
+div.table-headers {
+  width: calc(100% - 20px);
+  padding-top: 10px;
+  height: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.table-headers .table-header-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+div.data-grid {
+  padding: 0px;
+}
+
+div.table-entry {
+  font-size: 1rem;
+  font-weight: 300;
+  width: 100%;
+}
+
+div.table-entry a.table-action {
+  width: 100%;
+  padding: 5px 0px;
+  text-align: center;
+  margin: 0px auto;
+  background-color: var(--color-tertiary);
+  color: white;
+  text-decoration: none;
+}
+
+.actionBTN{
+  
+  width: 50px;
+  font-size: 10px;
+}
+
+
+/* Popup Check */
+.popUp{
+  background: rgb(240, 240, 240);
+  border-radius: 5px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.bannerShadow {
+  background-color: grey;
+  position: center;
+  justify-content: center;
+  height:100px;
+  width: 600px;
+  margin-bottom: 20px;
+
+}
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+ float: right;
+
+  transition: opacity 0.3s ease;
+}
+
+.removePopUp-container{
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.removePopUp{
+  background: rgb(240, 240, 240);
+  border-radius: 5px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.acceptBTN{
+  
+}
+
+.acceptBTN-disabled{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+.notification-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 0 0;
+  color: white;
+  padding: 15px 20px;
+  /* position: absolute; */
+  position: -webkit-sticky; /* Safari */
+  position: sticky; 
+  visibility: hidden; 
+  bottom: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.notification-container p {
+  margin: 0;
+}
+.notification-container.show {
+  /* position: absolute;
+  transform: translateY(-200px); */
+  visibility: visible;
+  
+}

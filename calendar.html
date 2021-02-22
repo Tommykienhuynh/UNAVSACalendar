@@ -1,0 +1,98 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.4.0/main.css" rel="stylesheet" />
+  <link href="js/core/main.css" rel="stylesheet" />
+  <link href="js/daygrid/main.css" rel="stylesheet" />
+  <link href="css/calendar.css" rel="stylesheet" />
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script src="js/core/main.js"></script>
+  <script src="js/daygrid/main.js"></script>
+  <script src="js/interaction/main.js"></script>
+  <script src="js/database.js"></script>
+  <script src="js/library.js"></script>
+  <!--     <script src="https://bundle.run/@fullcalendar/core@4.4.0"></script> -->
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">UNAVSA Calendar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item form-inline">
+        <a class="nav-link" href="#">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/index.html">Submit</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/calendar.html">Calendar</a>
+      </li>
+      
+            <li class="nav-item">
+        <a class="nav-link" href="/admin.html">Admin</a>
+      </li>
+     
+    </ul>
+    
+  </div>
+</nav>
+  <div class="container pt-5">
+    <div class="row pb-3">
+      <div class="col-7">
+        <div class="active-cyan-4 mb-4">
+          <input class="form-control" type="text" placeholder="Search Event" aria-label="Search" />
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="float-right">
+          <datalist id="suggestions">
+            <option value="norcal">Norcal</option>
+            <option value="socal">Socal</option>
+            <option value="northwest">North West</option>
+            <option value="southwest">SouthWest</option>
+            <option value="south">South</option>
+            <option value="newengland">New England</option>
+            <option value="westerncanda">Western Canda</option>
+            <option value="easterncanda">Eastern Canda</option>
+            <option value="midwest">Mid-West</option>
+            <option value="gulfcoast">Gulf Coast</option>
+            <option value="midalantic">Mid-Alantic</option>
+            <option value="central">Central</option>
+          </datalist>
+          <input autocomplete="on" id="regionSelect" list="suggestions" placeholder="Filter By Region" />
+        </div>
+      </div>
+    </div>
+    <div id="calendar"></div>
+    <div id="upcomingEvents">
+      <h2>
+        Events
+      </h2>
+      <div id="currentDayElement">
+        DAY HERE
+        Day Of the week
+      </div>
+      <!-- Todo update list of all events when day changes-->
+      <div id="dayEvents">
+
+
+      </div>
+
+    </div>
+  </div>
+  <script src="js/library.js"></script>
+  <script src="js/calendar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+.card {
+  padding: 1rem 0.5rem;
+}
+
+/******************************************* Submit Page  ***********************************************/
+
+html {
+  background-color: hsl(180, 14%, 95%);
+}
+
+input{
+  color:black;
+}
+
+.forms {
+  background-color: hsl(180, 14%, 95%);
+  height: 1400px;
+}
+.form-control {
+  color: black;  
+}
+
+.submit {
+  background-color: #ffffff;
+}
+.error-border {
+  border: 2px solid red;
+}
+
+.success-border {
+  border: 2px solid #2ecc71;
+}
+
+.status {
+  background-color: #ffffff;
+
+  height: 700px;
+  border-radius: 8px;
+  border-color: black;
+  border-width: 10px;
+}
+
+.accessKey {
+  height: 300px;
+  border-radius: 8px;
+  border-color: black;
+  border-width: 10px;
+  background-color: #ffffff;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.title {
+  text-align: center;
+  margin-top: 30px;
+  color: #289263;
+}
+.bannerPic {
+  background-image: url(https://cdn.glitch.com/ce4df961-42a3-4365-b7b6-3815e9ee35ec%2F78399925_10157098400906622_4615004116886749184_o.jpg?v=1585106353164);
+  background-position: center;
+  background-size: cover;
+  border-radius: 7px;
+  margin-top: 4px;
+  height: 180px;
+  width: 400px;
+  border: 2px;
+  border-color: white;
+  box-shadow: 0px 3px 25px 5px rgba(0, 0, 0, 0.25);
+}
+
+.btn-submit {
+  text-align: center;
+  padding: 20px, 30px;
+  border: 2px solid #66b260;
+  color: #ffffff;
+  border-radius: 7px;
+  background: linear-gradient(120deg, #8ac97c 0%, #3DB2C0 100%);
+}
+.code {
+  padding: 20 55;
+  text-align: center;
+}
+
+h1 {
+  display: inline;
+}
+h4 {
+  display: inline;
+}
+
+h4.code {
+  color: #289263;
+}
+
+.shadow {
+  box-shadow: 0px 5px 25px 0px hsla(0, 0%, 0%, 0.25);
+}
+
+.codeBox {
+}

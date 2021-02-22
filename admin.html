@@ -1,0 +1,276 @@
+<html>
+  <head>
+    <title>Calendar Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous"
+    ></script>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/admin.css" rel="stylesheet" />
+    <script src="js/database.js"></script>
+    <script src="js/library.js"></script>
+  </head>
+
+  <body>
+    
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">UNAVSA Calendar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item  form-inline">
+        <a class="nav-link" href="#">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/index.html">Submit</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/calendar.html">Calendar</a>
+      </li>
+      
+            <li class="nav-item active">
+        <a class="nav-link" href="/admin.html">Admin</a>
+      </li>
+     
+    </ul>
+    
+  </div>
+</nav>
+
+    
+    <div class="container mt-5">
+<!--       <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link active"
+            id="pills-home-tab"
+            data-toggle="pill"
+            href="#pills-home"
+            role="tab"
+            aria-controls="pills-home"
+            aria-selected="true"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="pills-profile-tab"
+            data-toggle="pill"
+            href="#pills-profile"
+            role="tab"
+            aria-controls="pills-profile"
+            aria-selected="false"
+            >Profile</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="pills-contact-tab"
+            data-toggle="pill"
+            href="#pills-contact"
+            role="tab"
+            aria-controls="pills-contact"
+            aria-selected="false"
+            >Contact</a
+          >
+        </li>
+      </ul> -->
+<!--       <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-home"
+          role="tabpanel"
+          aria-labelledby="pills-home-tab"
+        >
+          One
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-profile"
+          role="tabpanel"
+          aria-labelledby="pills-profile-tab"
+        >
+          Two
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-contact"
+          role="tabpanel"
+          aria-labelledby="pills-contact-tab"
+        >
+          Three
+        </div>
+      </div> -->
+      
+    
+      <div class="row justify-content-around">
+        <div class="col-lg-5 col-md-6 col-sm-12 status-grid">
+          <div class="row">
+            <h3>
+              Admin Dashboard
+            </h3>
+          </div>
+          <div class="row justify-content-between">
+            <div class="col-md-6 col-sm-12 padding-1  text-center">
+              <div class="card">
+                <span class="number" id="pendingNum"></span>
+                <span class="card-title">Pending</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 padding-1  text-center">
+              <div class="card">
+                <span class="number" id="views">17</span>
+                <span class="card-title ">Total Event Views</span>
+              </div>
+            </div>
+            <!-- </div>
+          <div class="row justify-content-between mt-5"> -->
+
+            <div class="col-md-6 col-sm-12 padding-1  text-center">
+              <div class="card">
+                <span class="number" id="approved">17</span>
+                <span class="card-title">Approved</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 padding-1  text-center">
+              <div class="card">
+                <span class="number" id="denied">17</span>
+                <span class="card-title">Denied</span>
+              </div>
+            </div>
+            <!-- </div>
+          <div class="row justify-content-between mt-5"> -->
+            <div class="col-md-6 col-sm-12 padding-1  text-center">
+              <div class="card">
+                <span class="number" id="futureE">17</span>
+                <span class="card-title">Future Events</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 padding-1  text-center">
+              <div class="card">
+                <span class="number" id="past">17</span>
+                <span class="card-title">Past Events</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6 col-sm-12   bg-secondary data-grid">
+          <div>
+            <ul class="tab-headers">
+              <li onclick="switchTabs(0)" class=" ad-tab active">All</li>
+              <li onclick="switchTabs(1)" class=" ad-tab ">Pending</li>
+              <li onclick="switchTabs(2)" class=" ad-tab ">Approved</li>
+              <li onclick="switchTabs(3)" class=" ad-tab ">Denied</li>
+              <li onclick="switchTabs(4)" class=" ad-tab ">Upcoming</li>
+              <li onclick="switchTabs(5)" class=" ad-tab ">Past</li>
+
+              <!--  <li onClick="switchTabs(6)">Edit</li> -->
+            </ul>
+          </div>
+          <div class="bg-tertiary">
+            <table id="tableEntries">
+              <tr>
+                <th class="table-header-title" style="width: 175px;">Name</th>
+                <th class="table-header-title" style="width: 120px;">Region</th>
+                <th class="table-header-title" style="width: 250px;">Dates</th>
+                <th class="table-header-title" style="width: 50px;">Action</th>
+              </tr>
+            </table>
+          </div>
+
+          <!-- <tbody id="tableEntries" class="full-width">
+            </tbody> -->
+        </div>
+
+        <!-- Popup for final confirmation-->
+
+        <div class="popUp-container" id="popUp-container">
+          <div class="popUp">
+            <button class="delete-btn" onclick="removePopUp()">X</button>
+            <h2>Comfirm Information</h2>
+            <table>
+              <tr>
+                <th>
+                  Event Name
+                </th>
+                <td id="tabName"></td>
+              </tr>
+              <tr>
+                <th>
+                  Region
+                </th>
+                <td id="tabRegion"></td>
+              </tr>
+              <tr>
+                <th>
+                  Start Date
+                </th>
+                <td id="tabStartDate"></td>
+              </tr>
+              <tr>
+                <th>
+                  End Date
+                </th>
+                <td id="tabEndDate"></td>
+              </tr>
+              <tr>
+                <th>
+                  Location:
+                </th>
+                <td id="tabLocation"></td>
+              </tr>
+              <tr>
+                <th>
+                  Description:
+                </th>
+                <td id="tabDescription"></td>
+              </tr>
+              <tr>
+                <th>
+                  Their comments:
+                </th>
+                <td id="tabComments"></td>
+              </tr>
+            </table>
+
+            <h4>Banner</h4>
+            <div class="bannerShadow"></div>
+            <button onclick="statusChange('accept')" class="acceptBTN">
+              Accept
+            </button>
+            <button onclick="statusChange('denied')" class="deleteBTN">
+              Decline
+            </button>
+          </div>
+        </div>
+
+        <div class="removePopUp-container" id="removePopUp-container">
+          <div class="removePopUp" id="removePopUp">
+            <button class="delete-btn" onclick="removePopUp()">X</button>
+            <h2>Change back to pending?</h2>
+
+            <button onclick="statusChange('pending')">Undo</button>
+          </div>
+        </div>
+
+        <div class="notification-container" id="notification-container">
+          <p id="notificationP">Event has been added to Calendar</p>
+        </div>
+      </div>
+    </div>
+    <script src="js/admin.js"></script>
+    <script src="js/library.js"></script>
+  </body>
+</html>
