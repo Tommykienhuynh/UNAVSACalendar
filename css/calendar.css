@@ -1,0 +1,26 @@
+div#upcomingEvents{
+  text-align: center;
+}
+
+div#dayEvents {
+  margin-top: 1rem;
+  text-align: left;
+}
+div#dayEvents > div {
+  margin-left: 2rem;
+  width: 80%;
+  border-radius: 10px;
+  background-color: #add8e6;
+  color: white;
+  padding: 1rem;
+}
+
+div#dayEvents div:nth-child(3) {
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  div#dayEvents > div {
+    margin: 1rem auto 1rem 4rem;
+  }
+}
